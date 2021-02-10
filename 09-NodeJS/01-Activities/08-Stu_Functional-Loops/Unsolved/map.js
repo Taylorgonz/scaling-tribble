@@ -21,3 +21,6 @@ const oddOrEven = originalArray.map(num => {
     return 'odd'
   }
 });
+
+console.log(oddOrEven)
+console.log(tripledArray)

@@ -46,9 +46,7 @@ var filter = (arr, cb) => {
   return result;
 };
 
-var evenNumbers = filter(numbers, (currentElement) => {
-  return currentElement % 2 === 0;
-});
+var evenNumbers = filter(numbers, (currentElement) => currentElement % 2 === 0);
 
 // Prints `[ 2, 4, 6, 8, 10 ]`
 console.log(evenNumbers);
@@ -63,13 +61,13 @@ var netflixQueue = {
     "Eternal Sunshine of the Spotless Mind",
     "Fight Club"
   ],
-  watchMovie: () => {
+  watchMovie: function () {
     this.queue.pop();
   },
-  addMovie: (movie) => {
+  addMovie: function(movie)  {
     this.queue.unshift(movie);
   },
-  printQueue: () => {
+  printQueue: function() {
     var list = "";
     for (var i = this.queue.length - 1; i >= 0; i--) {
       var currentMovie = this.queue[i];
@@ -78,7 +76,6 @@ var netflixQueue = {
     console.log(list);
   }
 };
-
 console.log("Printing movie queue!\n");
 netflixQueue.printQueue();
 netflixQueue.watchMovie();

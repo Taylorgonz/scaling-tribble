@@ -11,15 +11,13 @@ const moviePatrons = [
 
 // forEach is a functional way of iterating through an array without a for-loop
 
-moviePatrons.forEach(patron => console.log(patron.age));
+moviePatrons.forEach((patron, index) => console.log(patron.age));
 
 // 2.
 
 // Filter returns a new array containing only elements whose callback returns a truthy value
 
-const canWatchRatedR = moviePatrons.filter(function(patron) {
-  return patron.age > 17;
-});
+const canWatchRatedR = moviePatrons.filter((patron)=> patron.age > 17);
 
 console.log(canWatchRatedR);
 
@@ -28,19 +26,23 @@ console.log(canWatchRatedR);
 // Map returns a brand new array the same length as the first. Each element is passed into the callback.
 // Whatever is returned from the callback at each iteration is what goes into that index of the new array
 
-const cardedMoviePatrons = moviePatrons.map(patron => {
+const cardedMoviePatrons = moviePatrons.map((patron) => ({
   // Copy the object being iterated over
-  const pObj = { ...patron };
+   ...patron,
   // Do everything else the same
-  if (pObj.age >= 17) {
-    pObj.canWatchRatedR = true;
-  } else {
-    pObj.canWatchRatedR = false;
-  }
+  canWatchRatedR: patron.age >=17,
+  
   // Be sure to return the new obj, not the parameter
-  return pObj;
-});
+}));
 
+const sarah = moviePatrons.find((elem) => elem.name ==="Sarah")
+
+const mapped = moviePatrons.map((patrons) => {
+  return 1;
+}).reduce((prev,curr) => {
+  return prev + curr;
+}, 0);
+console.log(mapped)
 console.log("Movie Patrons: ")
 console.log(moviePatrons);
 
