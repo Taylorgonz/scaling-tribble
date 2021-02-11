@@ -6,4 +6,5 @@ const predictable = () => 1;
 module.exports = {
   pie,
   predictable,
+  myFunc: 
 };

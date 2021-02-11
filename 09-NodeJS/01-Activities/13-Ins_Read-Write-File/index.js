@@ -6,7 +6,13 @@ const fs = require('fs');
 fs.readFile('data.csv', 'utf8', (error, data) =>
   error ? console.error(error) : console.log(data)
 );
-
+try {
+const contents = fs.readFileSync(process.argv[2], 'utf-8');
+console.log(contents)
+}
+catch(exc) {
+  console.log(exc);
+}
 // Uncomment this next function to write to the file with anything you pass in as process.argv[2]
 
 // fs.writeFile('log.txt', process.argv[2], (err) =>

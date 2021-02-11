@@ -1,0 +1,6 @@
+undefined
+undefined
+undefined
+hello
+hello
+log.txt
