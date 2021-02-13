@@ -57,7 +57,7 @@ const generateHTML = (answers) =>
     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
       <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+      <li class="list-group-item">LinkedIn: <a href='${answers.linkedin}'>${answers.linkedin}</a></li>
     </ul>
   </div>
 </div>

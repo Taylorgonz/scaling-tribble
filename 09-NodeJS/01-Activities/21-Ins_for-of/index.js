@@ -18,3 +18,16 @@ for (const [key, value] of songs) {
 // Output:
 // Bad Guy's chart position is 1
 // Old Town Road's chart position is 2
+
+const myObj={
+  firstAttr: 1,
+  secondAttr: 2,
+  another: 4
+}
+
+for (const key in myObj) {
+  console.log(key);
+  console.log(myObj[key]);
+}
+
+Object.keys(myObj).forEach()

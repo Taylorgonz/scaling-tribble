@@ -1,3 +1,40 @@
+function doSomething(options) {
+  const defaults = {
+    someParam: 1,
+    another: 2 
+  }
+
+   options = {
+    ...defaults,
+    ...options
+  }
+
+  console.log(options);
+
+  // {
+  //   someParam: 1,
+  //   another: 2,
+  //   third: 'hi'
+
+  // }
+
+}
+
+  const opts= {
+    someParam: 10,
+    third: 'hi!'
+  }
+
+  doSomething(opts);
+
+  const abc = ['a', 'b', 'c'];
+  const def = ['d', 'e', 'f'];
+
+  const abcdef = [
+    ...abc,
+    ...def
+  ];
+
 // without rest
 function add(x, y) {
   return x + y;
